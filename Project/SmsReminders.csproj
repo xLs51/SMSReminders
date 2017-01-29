@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F2C58E8-067C-4B89-A3EF-36C8BD40AA82}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Project</RootNamespace>
+    <AssemblyName>Project</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Project_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Project.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <ExpressionBlendVersion>12.0.41212.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Design\DesignSmsService.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="Model\Sms.cs" />
+    <Compile Include="ViewModel\ListSmsViewModel.cs" />
+    <Compile Include="ViewModel\SmsBinding.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\CreateReminder.xaml.cs">
+      <DependentUpon>CreateReminder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ShowReminder.xaml.cs">
+      <DependentUpon>ShowReminder.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="View\CreateReminder.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ShowReminder.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\AppBar\add.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\AppBar\cancel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\AppBar\check.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\AppBar\delete.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\AppBar\save.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\AppBar\send.text.png" />
+    <Content Include="Assets\AppIcon.png" />
+    <Content Include="Assets\LargeTileAppIcon.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="BindableApplicationBar">
+      <HintPath>..\packages\BindableApplicationBar.1.1.0.0\lib\wp8\BindableApplicationBar.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras.WP8">
+      <HintPath>..\packages\MvvmLightLibs.4.2.30.0\lib\wp8\GalaSoft.MvvmLight.Extras.WP8.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.WP8">
+      <HintPath>..\packages\MvvmLightLibs.4.2.30.0\lib\wp8\GalaSoft.MvvmLight.WP8.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\MvvmLightLibs.4.2.30.0\lib\wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.4.2.30.0\lib\wp8\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
